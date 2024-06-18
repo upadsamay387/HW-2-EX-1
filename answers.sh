@@ -34,3 +34,7 @@ insert into graduates(name, age, gender, points) select name, age, gender, point
 update graduates set graduation='08/09/2019' where name='Layal';
 delete from students where name='Layal';
 
+10.
+select employees.name, employees.company, companies.date from employees inner join companies ON employees.company=companies.name;
+select employees.name from employees inner join companies ON employees.company=companies.name where companies.date<'2000';
+select companies.name from employees inner join companies on employees.company=companies.name where employees.role='Graphic Designer';
