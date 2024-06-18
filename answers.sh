@@ -38,3 +38,10 @@ delete from students where name='Layal';
 select employees.name, employees.company, companies.date from employees inner join companies ON employees.company=companies.name;
 select employees.name from employees inner join companies ON employees.company=companies.name where companies.date<'2000';
 select companies.name from employees inner join companies on employees.company=companies.name where employees.role='Graphic Designer';
+
+11.
+select name from students where points=(select max(points) from students);
+select avg(points) from students;
+select count(name) from students where points=500;
+select name from students where name glob '*s*' OR name glob '*S*';
+select name from students order by points desc;
